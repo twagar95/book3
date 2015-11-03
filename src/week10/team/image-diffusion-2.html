@@ -111,7 +111,9 @@ Discuss some findings
 var items   // global scope (i.e., can be accessed in javascript console)
 
 function solution1(){
-    return 'TODO'
+    return _.filter(items, function(tweet){
+        return tweet.Rt != 'Retweet'
+    }).length
 }
 
 function solution2(){
